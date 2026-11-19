@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Entre Capas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header-fixed">
+		<div class="header">
+			<div class="header-rail">
+				<div class="header-decorative"></div>
+			</div>
+			<nav class="header-nav" aria-label="Navegación principal">
+  <button class="nav-button" data-scroll="#concepto"><span>CONCEPTO</span></button>
+  <button class="nav-button" data-scroll="#capas"><span>CAPAS</span></button>
+  <button class="nav-button" data-scroll="#archivo"><span>ARCHIVO</span></button>
+  <button class="nav-button nav-function" data-scroll="#como-funciona">
+    <span>¿CÓMO FUNCIONA?</span>
+    <img src="assets/icons/4335c.svg" alt="">
+  </button>
+</nav>
+
+<div class="mobile-nav-actions">
+  <button type="button" class="mobile-nav-trigger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-dropdown">
+    <span class="trigger-icon" aria-hidden="true"></span>
+  </button>
+
+  <button type="button" class="mobile-nav-direct" data-scroll="#como-funciona">
+    <span>¿CÓMO FUNCIONA?</span>
+    <img src="assets/icons/4335c.svg" alt="">
+  </button>
+
+  <div class="mobile-dropdown" id="mobile-dropdown">
+    <button type="button" data-nav="concepto" data-scroll="#concepto">CONCEPTO</button>
+    <button type="button" data-nav="capas" data-scroll="#capas">CAPAS</button>
+    <button type="button" data-nav="archivo" data-scroll="#archivo">ARCHIVO</button>
+  </div>
+</div>
+		</div>
+	</header>
+	<main class="stage-shell">
+		<div class="design">
+			<section class="hero" id="concepto">
+				<img class="hero-circle hero-circle-one" src="assets/icons/d51a3.svg" alt="">
+				<img class="hero-circle hero-circle-two" src="assets/icons/ef6d2.svg" alt="">
+				<div class="hero-copy">
+					<div class="hero-kicker">UN VIAJE SENSORIAL A TRAVÉS DE LA CIUDAD</div>
+					<div class="hero-title">
+						<svg class="title-entre" viewBox="0 15 574 128" role="img" aria-label="ENTRE">
+							<text x="287" y="128" text-anchor="middle" fill="#e26236" stroke="#e26236" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" paint-order="stroke fill">ENTRE</text>
+							<text x="287" y="128" text-anchor="middle" fill="none" stroke="#f9f9f9" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" paint-order="stroke fill">ENTRE</text>
+						</svg>
+						<svg class="title-capas" viewBox="0 25 574 95" role="img" aria-label="CAPAS">
+							<text x="574" y="105" text-anchor="end" fill="#f9f9f9" stroke="#ff8ec9" stroke-width="19" stroke-linejoin="round" stroke-linecap="round" paint-order="stroke fill">CAPAS</text>
+						</svg>
+					</div>
+					<p class="hero-description">La ciudad no es un solo lugar. Es una variedad de capas superpuestas que esperan ser notadas.</p>
+					<button class="primary-button hero-button" data-scroll="#layers">
+						<span>EXPLORA EL RECORRIDO</span>
+						<img src="assets/icons/9d73e.svg" alt="">
+					</button>
+				</div>
+				<p class="hero-note">MIRA HACIA ARRIBA. BAJA EL RITMO. CONECTA.</p>
+				<div class="hero-phone app-phone-mockup" aria-label="Vista de la aplicación Entre Capas">
+					<div class="phone-tilt" data-phone-tilt>
+						<div class="phone-bezel" data-phone-bezel>
+							<div class="phone-edge phone-edge-left"></div>
+							<div class="phone-edge phone-edge-right"></div>
+							<div class="phone-screen">
+								<img src="assets/3f082.png" alt="Vista de la aplicación Entre Capas">
+								<span class="phone-island" aria-hidden="true"></span>
+								<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="ticker ticker-one">MIRA MÁS DE CERCA · ESCUCHA MÁS TIEMPO · TOCA LA CIUDAD · SIGUE UN AROMA</div>
+
+			<section class="pilot">
+				<h2 class="pilot-title">AVANZAMOS POR LA CIUDAD EN</h2>
+				<div class="pilot-label">PILOTO AUTOMÁTICO</div>
+				<p class="auto-text">La mirada puesta en nuestros teléfonos. Música en nuestros oídos. La mente en otro lugar.<br><br>Llegamos, pero nos perdemos todo lo que ocurrió en el camino.</p>
+				<span class="pilot-chip chip-time">12:08</span>
+				<span class="pilot-chip chip-notifications">8 notificaciones</span>
+				<span class="pilot-chip chip-playing">Reproduciendo...</span>
+				<span class="pilot-chip chip-percent">67%</span>
+				<span class="pilot-chip chip-turn">Gira a la izquierda</span>
+			</section>
+
+			<section class="layers" id="layers">
+				<div class="layer-white"></div>
+				<div class="band band-pink"></div>
+				<div class="band band-orange"></div>
+				<div class="band band-blue"></div>
+				<h2 class="layer-title">UNA CIUDAD NUNCA ES SOLO LO QUE VES</h2>
+				<h2 class="band-title band-title-one">SON CUATRO CAPAS,</h2>
+				<h2 class="band-title band-title-two">CUATRO SENTIDOS</h2>
+				<h2 class="band-title band-title-three">UNA EXPERIENCIA</h2>
+			</section>
+
+			<section class="steps" id="capas">
+				<header class="steps-header">
+					<span class="section-kicker">DE LA RUTINA AL DESCUBRIMIENTO</span>
+					<h2>TU CIUDAD<br><span>RE-INTERPRETADA</span></h2>
+				</header>
+				<div class="step step-one">
+					<div class="step-text-column">
+						<p class="step-number">01</p>
+						<div class="step-copy">
+							<h3>ELIGE TU RUTA</h3>
+							<p>Define a dónde vas y cómo te desplazarás.</p>
+						</div>
+					</div>
+					<div class="step-divider divider-one"></div>
+					<div class="phone-frame phone-one app-phone-mockup">
+						<div class="phone-tilt" data-phone-tilt>
+							<div class="phone-bezel" data-phone-bezel>
+								<div class="phone-edge phone-edge-left"></div>
+								<div class="phone-edge phone-edge-right"></div>
+								<div class="phone-screen">
+									<img src="assets/51c94.png" alt="Pantalla nuevo recorrido">
+									<span class="phone-island" aria-hidden="true"></span>
+									<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="step step-two">
+					<div class="step-text-column">
+						<p class="step-number">02</p>
+						<div class="step-copy">
+							<h3>SELECCIONA<br>TUS SENTIDOS</h3>
+							<p>Elige en qué centrar tu atención: la vista, el sonido, el tacto o el olfato.<br><br>¡Puedes seleccionar uno o todos!</p>
+						</div>
+					</div>
+					<div class="step-divider divider-two"></div>
+					<div class="phone-frame phone-two app-phone-mockup">
+						<div class="phone-tilt" data-phone-tilt>
+							<div class="phone-bezel" data-phone-bezel>
+								<div class="phone-edge phone-edge-left"></div>
+								<div class="phone-edge phone-edge-right"></div>
+								<div class="phone-screen">
+									<img src="assets/e82db.png" alt="Pantalla categorías">
+									<span class="phone-island" aria-hidden="true"></span>
+									<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="step step-three">
+					<div class="step-text-column">
+						<p class="step-number">03</p>
+						<div class="step-copy">
+							<h3>COMPLETA<br>MISIONES</h3>
+							<p>Recibe pequeños estímulos sensoriales mientras te desplazas.<br><br>Haz una pausa, observa y captura lo que encuentres.</p>
+						</div>
+					</div>
+					<div class="step-divider divider-three"></div>
+					<div class="phone-frame phone-three app-phone-mockup">
+						<div class="phone-tilt" data-phone-tilt>
+							<div class="phone-bezel" data-phone-bezel>
+								<div class="phone-edge phone-edge-left"></div>
+								<div class="phone-edge phone-edge-right"></div>
+								<div class="phone-screen">
+									<img src="assets/0c20e.png" alt="Pantalla alerta de misión visual">
+									<span class="phone-island" aria-hidden="true"></span>
+									<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="step step-four">
+					<div class="step-text-column">
+						<p class="step-number">04</p>
+						<div class="step-copy">
+							<h3>REVISA QUÉ SE<br>QUEDÓ CONTIGO</h3>
+							<p>Tus descubrimientos se convierten en un archivo personal: fotos, videos, audios y textos totalmente tuyos.</p>
+						</div>
+					</div>
+					<div class="step-divider divider-four"></div>
+					<div class="phone-frame phone-four app-phone-mockup">
+						<div class="phone-tilt" data-phone-tilt>
+							<div class="phone-bezel" data-phone-bezel>
+								<div class="phone-edge phone-edge-left"></div>
+								<div class="phone-edge phone-edge-right"></div>
+								<div class="phone-screen">
+									<img class="phone-screen-summary" src="assets/2700f.png" alt="Pantalla resumen y guardar">
+									<span class="phone-island" aria-hidden="true"></span>
+									<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="missions" id="misiones">
+				<div class="missions-heading">
+					<span class="section-kicker">PEQUEÑAS MISIONES. NUEVOS DESCUBRIMIENTOS.</span>
+					<h2 class="missions-title">DESCUBRE LO QUE<br><span>PASA INADVERTIDO</span></h2>
+				</div>
+				<div class="mission-grid-lines" aria-hidden="true">
+					<img src="assets/icons/a44aa.svg" alt="">
+					<img src="assets/icons/0319b.svg" alt="">
+				</div>
+				<div class="mission-grid">
+					<article class="sense sense-button">
+						<div class="sense-figure sense-icon sense-visual">
+							<img src="assets/icons/Visual.svg" alt="Forma visual">
+						</div>
+						<div class="sense-info">
+							<p class="sense-number">01</p>
+							<div><h3>VISUAL</h3><p class="sense-description">“Encuentra un color que solo aparezca una vez en tu ruta.”</p></div>
+						</div>
+					</article>
+					<article class="sense sense-button">
+						<div class="sense-figure sense-icon sense-auditory">
+							<img src="assets/icons/Auditivo.svg" alt="Forma auditiva">
+						</div>
+						<div class="sense-info">
+							<p class="sense-number">02</p>
+							<div><h3>AUDITIVO</h3><p class="sense-description">“Cierra los ojos. Registra el sonido más lejano que puedas oír.”</p></div>
+						</div>
+					</article>
+					<article class="sense sense-button">
+						<div class="sense-figure sense-icon sense-tactile">
+							<img src="assets/icons/Triángulo.svg" alt="Forma táctil triangular">
+						</div>
+						<div class="sense-info">
+							<p class="sense-number">03</p>
+							<div><h3>TÁCTIL</h3><p class="sense-description">“Toca tres superficies. ¿Cuál de ellas crees que cuenta la mejor historia?”</p></div>
+						</div>
+					</article>
+					<article class="sense sense-button">
+						<div class="sense-figure sense-icon sense-olfactory">
+							<img src="assets/icons/Olfativo.svg" alt="Forma olfativa">
+						</div>
+						<div class="sense-info">
+							<p class="sense-number">04</p>
+							<div><h3>OLFATIVO</h3><p class="sense-description">“Sigue un aroma durante treinta segundos. ¿A dónde conduce?”</p></div>
+						</div>
+					</article>
+				</div>
+				<p class="missions-note">LAS MISIONES INTERRUMPEN LA RUTINA, NO EL VIAJE.</p>
+			</section>
+
+			<div class="ticker ticker-two">MIRA MÁS DE CERCA · ESCUCHA MÁS TIEMPO · TOCA LA CIUDAD · SIGUE UN AROMA</div>
+
+			<section class="archive" id="archivo">
+				<video class="archive-video" autoplay loop muted playsinline aria-hidden="true">
+					<source src="assets/Fotos_Descubrimientos.webm" type="video/webm">
+				</video>
+				<div class="archive-heading">
+					<span class="section-kicker">UN ARCHIVO PERSONAL DE VIVENCIAS</span>
+					<h2 class="archive-title">LO QUE DESCUBRES,<br><span>SE QUEDA CONTIGO</span></h2>
+				</div>
+				<p class="archive-note">CADA MISIÓN SE CONVIERTE EN UN RASTRO (UNA IMAGEN, SONIDO, PENSAMIENTO O TEXTURA) RECOPILADO EN UN MAPA QUE SOLO TE PERTENECE A TI.</p>
+				<div class="archive-screen screen-stats">
+					<div class="archive-phone-box">
+						<div class="archive-phone-scale">
+							<div class="phone-tilt" data-phone-tilt>
+								<div class="phone-bezel" data-phone-bezel>
+									<div class="phone-edge phone-edge-left"></div>
+									<div class="phone-edge phone-edge-right"></div>
+									<div class="phone-screen">
+										<img src="assets/4bbd7.png" alt="Pantalla de estadísticas">
+										<span class="phone-island" aria-hidden="true"></span>
+										<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="archive-screen screen-achievements">
+					<div class="archive-phone-box">
+						<div class="archive-phone-scale">
+							<div class="phone-tilt" data-phone-tilt>
+								<div class="phone-bezel" data-phone-bezel>
+									<div class="phone-edge phone-edge-left"></div>
+									<div class="phone-edge phone-edge-right"></div>
+									<div class="phone-screen">
+										<img src="assets/7cec4.png" alt="Pantalla de logros">
+										<span class="phone-island" aria-hidden="true"></span>
+										<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="archive-screen screen-list">
+					<div class="archive-phone-box">
+						<div class="archive-phone-scale">
+							<div class="phone-tilt" data-phone-tilt>
+								<div class="phone-bezel" data-phone-bezel>
+									<div class="phone-edge phone-edge-left"></div>
+									<div class="phone-edge phone-edge-right"></div>
+									<div class="phone-screen">
+										<img src="assets/26057.png" alt="Pantalla de recorridos guardados">
+										<span class="phone-island" aria-hidden="true"></span>
+										<span class="phone-glare" data-phone-glare aria-hidden="true"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="newsletter" id="newsletter">
+				<div class="newsletter-frame"></div>
+				<div class="newsletter-inner"></div>
+				<div class="newsletter-copy">
+					<span class="newsletter-kicker">UN ARCHIVO PERSONAL DE VIVENCIAS</span>
+					<h2>ÚNETE A</h2>
+					<div class="newsletter-label">LA LISTA</div>
+					<p>Sé de los primeros en explorar tu ciudad a través de tus sentidos.<br><br>¡Te avisaremos cuando <strong>Entre Capas</strong> esté listo para ponerse en marcha!</p>
+				</div>
+				<form class="signup">
+					<label class="field field-name">
+						<span>Tu nombre</span>
+						<input name="name" aria-label="Tu nombre">
+					</label>
+					<label class="field field-email">
+						<span>Tu correo</span>
+						<input name="email" type="email" aria-label="Tu correo">
+					</label>
+					<label class="field field-city">
+						<span>Tu ciudad</span>
+						<input name="city" aria-label="Tu ciudad">
+					</label>
+					<button class="primary-button signup-button" type="submit">
+						<span>UNIRSE A LA LISTA</span>
+						<img src="assets/icons/9d73e.svg" alt="">
+					</button>
+				</form>
+			</section>
+
+			<section class="footer">
+				<h2 class="footer-kicker">¿ESTÁS PREPARADX PARA DESCUBRIRLO?</h2>
+				<button class="primary-button footer-button" data-scroll="#concepto">
+					<span>PRUEBA LA APP</span>
+					<img src="assets/icons/9d73e.svg" alt="">
+				</button>
+				<img class="footer-shape shape-one" src="assets/icons/ff8e3.svg" alt="">
+				<img class="footer-shape shape-two" src="assets/icons/c57cb.svg" alt="">
+				<img class="footer-shape shape-three" src="assets/icons/56429.svg" alt="">
+				<div class="footer-rule"></div>
+				<div class="footer-credit"><span>ENTRE CAPAS</span><button data-scroll="#concepto">VUELVE AL INICIO<img src="assets/icons/413b1.svg" alt=""></button></div>
+			</section>
+		</div>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

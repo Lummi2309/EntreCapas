@@ -3,6 +3,61 @@ let sectionOffsets = {};
 let cachedLayers = { top:1688, height:678 };
 let cachedSteps = { top:3072, height:4222 };
 
+const ACCESS_KEY = 'b5aefd93-8fe3-4f54-b533-186e8dd7df55'; 
+const signup = document.querySelector('.signup');
+const signupEmail = signup.querySelector('[name="email"]');
+const signupButton = signup.querySelector('.signup-button');
+const signupButtonLabel = signupButton.querySelector('span');
+const signupStatus = signup.querySelector('.signup-status');
+
+signup.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (signupButton.disabled) return;
+
+  signupStatus.textContent = '';
+  signupEmail.value = signupEmail.value.trim();
+
+  if (!signupEmail.checkValidity()) {
+    signupStatus.textContent = 'Introduce un correo válido.';
+    signupEmail.focus();
+    return;
+  }
+
+  if (!ACCESS_KEY || ACCESS_KEY.includes('PEGA_AQUI')) {
+    signupStatus.textContent = 'Configura la clave de acceso para activar el registro.';
+    return;
+  }
+
+  const formData = new FormData(signup);
+  formData.append('access_key', ACCESS_KEY);
+  formData.append('subject', 'Nuevo registro en Waiting List - Entre Capas');
+
+  const originalLabel = signupButtonLabel.textContent;
+  signupButton.disabled = true;
+  signupButtonLabel.textContent = 'ENVIANDO...';
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+    const result = await response.json();
+
+    if (!response.ok || result.success !== true) {
+      throw new Error(result.message || `Error HTTP ${response.status}`);
+    }
+
+    signupStatus.textContent = '¡Ya estás en la lista! Gracias por unirte.';
+    signup.reset();
+  } catch (error) {
+    console.error('Error al registrar el correo:', error);
+    signupStatus.textContent = 'No se pudo enviar. Inténtalo de nuevo.';
+  } finally {
+    signupButton.disabled = false;
+    signupButtonLabel.textContent = originalLabel;
+  }
+});
+
 function cacheLayout() {
   cachedScale = Math.min(1, window.innerWidth / 1920);
   document.documentElement.style.setProperty('--scale', String(cachedScale));
@@ -224,7 +279,6 @@ document.querySelectorAll('.archive-screen, .app-phone-mockup').forEach((screen)
           const nextAnchorY = mobile ? 40 + (index + 1) * 20 : 20 + (index + 1) * 2;
           const nextStop = nextNaturalTop - nextAnchorY;
           const cardHeight = step.offsetHeight || 920;
-          // Empieza a encogerse apenas la siguiente tarjeta entra por abajo (cardHeight antes de frenar)
           const rawProgress = (scrollY / scale - (nextStop - cardHeight)) / cardHeight;
           overlap = Math.max(0, Math.min(1, rawProgress));
         }
@@ -273,19 +327,16 @@ if (window.Matter) {
   const Matter = window.Matter;
   const footer = document.querySelector('.footer');
   if (footer) {
-    // Asegurar que el footer sirva de referencia para el canvas
     if (getComputedStyle(footer).position === 'static') {
       footer.style.position = 'relative';
     }
 
-    // Buscar las 3 figuras originales del footer y extraer sus imágenes reales
     const originalEls = Array.from(footer.querySelectorAll('.shape-one, .shape-two, .shape-three'));
     const extractedSrcs = originalEls
       .map((el) => (el.tagName === 'IMG' ? el.src : el.querySelector('img')?.src))
       .filter(Boolean);
 
     footer.classList.add('has-footer-physics');
-    // Ocultar las figuras estáticas originales
     originalEls.forEach((el) => {
       el.style.opacity = '0';
       el.style.pointerEvents = 'none';
@@ -304,7 +355,6 @@ if (window.Matter) {
       images[cfg.type] = img;
     });
 
-    // Crear canvas posicionado encima del fondo del footer
     const canvas = document.createElement('canvas');
     canvas.className = 'footer-matter-canvas';
     canvas.width = 1920;
@@ -386,7 +436,6 @@ if (window.Matter) {
       }
     };
 
-    // Disparar la lluvia en cuanto el footer entre en pantalla
     const checkFooterScroll = () => {
       if (rainStarted) return;
       const rect = footer.getBoundingClientRect();
@@ -411,7 +460,6 @@ if (window.Matter) {
       checkFooterScroll();
     });
 
-    // Repulsión radial al pasar el cursor (compensando --scale)
     let pointer = null;
     const updatePointer = (clientX, clientY) => {
       const rect = footer.getBoundingClientRect();
@@ -458,7 +506,6 @@ if (window.Matter) {
       });
     });
 
-    // Loop de renderizado con delta fijo de 16.667ms (cero warnings en consola)
     const animatePhysics = () => {
       Matter.Engine.update(engine, 16.667);
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -474,7 +521,6 @@ if (window.Matter) {
         if (img && img.complete && img.naturalWidth > 0) {
           context.drawImage(img, -size / 2, -size / 2, size, size);
         } else {
-          // Respaldo vectorial si el SVG aún no cargó
           context.fillStyle = body.plugin.shapeColor;
           context.beginPath();
           const r = body.plugin.displayRadius;

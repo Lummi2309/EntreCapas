@@ -933,6 +933,16 @@ button, input { font: inherit; }
   outline:none;
 }
 .signup-button { position:absolute; left:0; top:407px; width:333px; }
+.signup-status {
+  position:absolute;
+  left:0;
+  top:475px;
+  width:100%;
+  margin:0;
+  color:var(--blue);
+  font-size:20px;
+  line-height:1.2;
+}
 
 .footer {
   position:absolute;
@@ -1729,6 +1739,7 @@ button, input { font: inherit; }
   .field-city { top: 150px; }
   .signup-button { top: 220px; width: auto; height: 42px; }
   .signup-button span { font-size: 13px; }
+  .signup-status { top: 270px; font-size: 14px; }
 
   .footer { top: 9206px; width: 390px; height: 346px; overflow: hidden; }
   .footer.has-footer-physics .footer-shape { visibility: hidden; }

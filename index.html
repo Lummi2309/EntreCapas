@@ -324,14 +324,14 @@
 					<div class="newsletter-label">LA LISTA</div>
 					<p>Sé de los primeros en explorar tu ciudad a través de tus sentidos.<br><br>¡Te avisaremos cuando <strong>Entre Capas</strong> esté listo para ponerse en marcha!</p>
 				</div>
-				<form class="signup">
+				<form class="signup" novalidate>
 					<label class="field field-name">
 						<span>Tu nombre</span>
 						<input name="name" aria-label="Tu nombre">
 					</label>
 					<label class="field field-email">
 						<span>Tu correo</span>
-						<input name="email" type="email" aria-label="Tu correo">
+						<input name="email" type="email" aria-label="Tu correo" aria-describedby="signup-status" required>
 					</label>
 					<label class="field field-city">
 						<span>Tu ciudad</span>
@@ -341,6 +341,7 @@
 						<span>UNIRSE A LA LISTA</span>
 						<img src="assets/icons/9d73e.svg" alt="">
 					</button>
+					<p class="signup-status" id="signup-status" role="status" aria-live="polite"></p>
 				</form>
 			</section>
 
